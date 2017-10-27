@@ -7,7 +7,7 @@ const parts = require('../webpack.parts')
 
 const PATHS = {
   app: path.join(__dirname, '../../apps/app3/main.js'),
-  build: path.join(__dirname, '../../builds/app3'),
+  build: path.join(__dirname, '../../dist/app3'),
 }
 
 module.exports = (env) => {

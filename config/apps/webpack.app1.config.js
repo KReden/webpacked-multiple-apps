@@ -10,9 +10,11 @@ const PATHS = {
   build: path.join(__dirname, '../../dist/app1'),
 }
 
-module.exports = (env) => {
+module.exports = (env, name) => {
+  // Need to use app manifest and pass it down.
+  // It will contain all the relavent info for a given app.
   if(env === 'production'){
-    return merge(productionConfig, webpackBaseConfig(PATHS.app, PATHS.build))
+    return merge(webpackBaseConfig(PATHS.app, PATHS.build, name), productionConfig(PATHS.build))
   }
   return merge(developmentConfig, parts.esLint({ include: PATHS.app }), webpackBaseConfig(PATHS.app, PATHS.build))
 }

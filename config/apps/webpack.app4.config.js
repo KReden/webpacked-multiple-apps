@@ -6,8 +6,8 @@ const productionConfig = require('../webpack.prod.config')
 const parts = require('../webpack.parts')
 
 const PATHS = {
-  app: path.join(__dirname, '../../apps/app3/main.js'),
-  build: path.join(__dirname, '../../dist/app3'),
+  app: path.join(__dirname, '../../apps/app4/main.js'),
+  build: path.join(__dirname, '../../dist/app4'),
 }
 
 module.exports = (env, name) => {
